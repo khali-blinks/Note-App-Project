@@ -12,11 +12,14 @@ export default function App() {
 
   return (
     <>
-      <section class="hero is-primary">
-        <div class="hero-body">
-          <p class="title">Welcome to My Note App</p>
+      <section className="hero is-primary mb-5">
+        <div className="hero-body">
+          <p className="title">Welcome to My Note App</p>
         </div>
       </section>
+      <button className="mb-5" onClick={log}>
+        New Note
+      </button>
       <Editor
         apiKey="poybbk4udfgq3b95i7w3gq8222uqjh66wooovresv5s43bde"
         onInit={(_evt, editor) => (editorRef.current = editor)}
@@ -56,7 +59,6 @@ export default function App() {
             "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
         }}
       />
-      <button onClick={log}>Log editor content</button>
     </>
   );
 }
