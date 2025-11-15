@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { Editor } from "@tinymce/tinymce-react";
-import "./App.css";
+import "bulma/css/bulma.min.css";
 
 export default function App() {
   const editorRef = useRef(null);
@@ -12,13 +12,21 @@ export default function App() {
 
   return (
     <>
+      <section class="hero is-primary">
+        <div class="hero-body">
+          <p class="title">Welcome to My Note App</p>
+        </div>
+      </section>
       <Editor
         apiKey="poybbk4udfgq3b95i7w3gq8222uqjh66wooovresv5s43bde"
         onInit={(_evt, editor) => (editorRef.current = editor)}
         initialValue="<p>This is the initial content of the editor.</p>"
         init={{
           height: 500,
+          width: 800,
           menubar: false,
+          min_height: 300,
+          max_height: 800,
           plugins: [
             "advlist",
             "autolink",
