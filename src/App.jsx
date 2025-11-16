@@ -1,9 +1,11 @@
+import { useState } from "react";
 import Editor from "./Editor";
 import "bulma/css/bulma.min.css";
 
 export default function App() {
+  const [showEditor, setShowEditor] = useState(false);
   const handleClick = () => {
-    return <Editor />;
+    setShowEditor(true);
   };
   return (
     <>
@@ -16,6 +18,7 @@ export default function App() {
         <button onClick={handleClick} className=" button is-link mb-5">
           New Note
         </button>
+        {showEditor && <Editor />}
       </div>
     </>
   );
