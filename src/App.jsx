@@ -1,7 +1,10 @@
-import Editors from "./Editor";
+import Editor from "./Editor";
 import "bulma/css/bulma.min.css";
 
 export default function App() {
+  const handleClick = () => {
+    return <Editor />;
+  };
   return (
     <>
       <section className="hero is-primary mb-5">
@@ -10,9 +13,10 @@ export default function App() {
         </div>
       </section>
       <div className="buttons is-centered">
-        <button className=" button is-link mb-5">New Note</button>
+        <button onClick={handleClick} className=" button is-link mb-5">
+          New Note
+        </button>
       </div>
-      <Editors />
     </>
   );
 }
