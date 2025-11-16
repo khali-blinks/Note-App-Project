@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Editor from "./Editor";
+import Edittor from "./Editor";
 import "bulma/css/bulma.min.css";
 
 export default function App() {
@@ -14,11 +14,11 @@ export default function App() {
           <p className="title">Welcome to My Note App</p>
         </div>
       </section>
-      <div className="buttons is-centered">
+      <div className="is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
         <button onClick={handleClick} className=" button is-link mb-5">
           New Note
         </button>
-        {showEditor && <Editor />}
+        {showEditor && <Edittor />}
       </div>
     </>
   );

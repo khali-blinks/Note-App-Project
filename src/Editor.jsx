@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { Editor } from "@tinymce/tinymce-react";
 import "bulma/css/bulma.min.css";
 
-export default function Editors() {
+export default function Edittor() {
   const editorRef = useRef(null);
 
   return (
