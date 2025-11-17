@@ -11,7 +11,7 @@ export default function Edittor() {
         <Editor
           apiKey="poybbk4udfgq3b95i7w3gq8222uqjh66wooovresv5s43bde"
           onInit={(_evt, editor) => (editorRef.current = editor)}
-          initialValue="<p>This is the initial content of the editor.</p>"
+          initialValue="<p>Type here ...</p>"
           init={{
             height: 500,
             width: 800,
