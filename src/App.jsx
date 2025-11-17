@@ -5,7 +5,7 @@ import "bulma/css/bulma.min.css";
 export default function App() {
   const [showEditor, setShowEditor] = useState(false);
   const handleClick = () => {
-    setShowEditor(true);
+    setShowEditor(!showEditor);
   };
   return (
     <>
