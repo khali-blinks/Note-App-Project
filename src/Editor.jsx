@@ -5,12 +5,30 @@ import "bulma/css/bulma.min.css";
 export default function Edittor() {
   const editorRef = useRef(null);
 
+  const saveContent = () => {
+    if (editorRef.current) {
+      const content = editorRef.current.getContent();
+      localStorage.setItem("savedNote", content);
+      alert("Note saved successfully!");
+    }
+  };
+
+  const loadContent = () => {
+    const savedContent = localStorage.getItem("savedNote");
+    if (savedContent && editorRef.current) {
+      editorRef.current.setContent(savedContent);
+    }
+  };
+
   return (
     <div className="container is-flex is-justify-content-center is-align-items-center">
       <div className="box">
         <Editor
           apiKey="poybbk4udfgq3b95i7w3gq8222uqjh66wooovresv5s43bde"
-          onInit={(_evt, editor) => (editorRef.current = editor)}
+          onInit={(_evt, editor) => {
+            editorRef.current = editor;
+            loadContent();
+          }}
           initialValue="<p>Type here ...</p>"
           init={{
             height: 500,
@@ -48,7 +66,9 @@ export default function Edittor() {
           }}
         />
         <div className="buttons mt-4">
-          <button className="button is-primary">Save Note</button>
+          <button onClick={saveContent} className="button is-primary">
+            Save Note
+          </button>
         </div>
       </div>
     </div>
