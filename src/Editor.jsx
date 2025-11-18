@@ -6,8 +6,8 @@ export default function Edittor() {
   const editorRef = useRef(null);
 
   return (
-    <div className="is-flex is-justify-content-center is-align-items-center">
-      <>
+    <div className="container is-flex is-justify-content-center is-align-items-center">
+      <div className="box">
         <Editor
           apiKey="poybbk4udfgq3b95i7w3gq8222uqjh66wooovresv5s43bde"
           onInit={(_evt, editor) => (editorRef.current = editor)}
@@ -47,7 +47,10 @@ export default function Edittor() {
               "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
           }}
         />
-      </>
+        <div className="buttons mt-4">
+          <button className="button is-primary">Save Note</button>
+        </div>
+      </div>
     </div>
   );
 }
