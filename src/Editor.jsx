@@ -18,6 +18,7 @@ export default function Edittor() {
     if (savedContent && editorRef.current) {
       editorRef.current.setContent(savedContent);
     }
+    console.log("Loaded content:", savedContent);
   };
 
   return (
