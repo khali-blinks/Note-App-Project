@@ -1,9 +1,17 @@
-import { useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Editor } from "@tinymce/tinymce-react";
 import "bulma/css/bulma.min.css";
 
 export default function Edittor() {
+  const [initialContent, setInitialContent] = useState("<p>Type here ...</p>");
   const editorRef = useRef(null);
+
+  useEffect(() => {
+    const savedContent = localStorage.getItem("savedNote");
+    if (savedContent) {
+      setInitialContent(savedContent);
+    }
+  }, []);
 
   const saveContent = () => {
     if (editorRef.current) {
@@ -13,14 +21,6 @@ export default function Edittor() {
     }
   };
 
-  const loadContent = () => {
-    const savedContent = localStorage.getItem("savedNote");
-    if (savedContent && editorRef.current) {
-      editorRef.current.setContent(savedContent);
-    }
-    console.log("Loaded content:", savedContent);
-  };
-
   return (
     <div className="container is-flex is-justify-content-center is-align-items-center">
       <div className="box">
@@ -28,9 +28,8 @@ export default function Edittor() {
           apiKey="poybbk4udfgq3b95i7w3gq8222uqjh66wooovresv5s43bde"
           onInit={(_evt, editor) => {
             editorRef.current = editor;
-            loadContent();
           }}
-          initialValue="<p>Type here ...</p>"
+          initialValue={initialContent}
           init={{
             height: 500,
             width: 800,
