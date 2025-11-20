@@ -4,6 +4,7 @@ import "bulma/css/bulma.min.css";
 
 export default function Edittor() {
   const [initialContent, setInitialContent] = useState("<p>Type here ...</p>");
+  const [isLoading, setIsLoading] = useState(true);
   const editorRef = useRef(null);
 
   useEffect(() => {
