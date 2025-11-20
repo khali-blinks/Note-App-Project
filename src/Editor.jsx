@@ -24,7 +24,12 @@ export default function Edittor() {
 
   return (
     <div className="container is-flex is-justify-content-center is-align-items-center">
-      <div className="box">
+      <div className="box" style={{ width: "800px" }}>
+        {isLoading && (
+          <div className="notification is-info is-light">
+            <p>Loading, please wait...</p>
+          </div>
+        )}
         <Editor
           apiKey="poybbk4udfgq3b95i7w3gq8222uqjh66wooovresv5s43bde"
           onInit={(_evt, editor) => {
