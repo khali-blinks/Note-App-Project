@@ -32,7 +32,7 @@ export default function Edittor() {
           initialValue={initialContent}
           init={{
             height: 500,
-            width: 800,
+            width: "100%",
             menubar: false,
             min_height: 300,
             max_height: 800,
