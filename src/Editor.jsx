@@ -34,14 +34,15 @@ export default function Edittor() {
           apiKey="poybbk4udfgq3b95i7w3gq8222uqjh66wooovresv5s43bde"
           onInit={(_evt, editor) => {
             editorRef.current = editor;
+            setIsLoading(false);
           }}
           initialValue={initialContent}
           init={{
             height: 500,
             width: "100%",
             menubar: false,
-            min_height: 300,
-            max_height: 800,
+            min_height: 500,
+            max_height: 500,
             plugins: [
               "advlist",
               "autolink",
