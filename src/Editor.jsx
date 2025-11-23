@@ -81,5 +81,3 @@ export default function Edittor() {
     </div>
   );
 }
-// Need to fix blinking savedContent
-// Need to fix loading state
