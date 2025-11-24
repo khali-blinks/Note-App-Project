@@ -13,7 +13,7 @@ export default function Edittor() {
       setInitialContent(savedContent);
     }
   }, []);
-
+  // Save content to localStorage
   const saveContent = () => {
     if (editorRef.current) {
       const content = editorRef.current.getContent();
