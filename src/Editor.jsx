@@ -6,7 +6,7 @@ export default function Edittor() {
   const [initialContent, setInitialContent] = useState("<p>Type here ...</p>");
   const [isLoading, setIsLoading] = useState(true);
   const editorRef = useRef(null);
-
+  // Load saved content from localStorage on mount
   useEffect(() => {
     const savedContent = localStorage.getItem("savedNote");
     if (savedContent) {
