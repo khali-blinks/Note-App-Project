@@ -6,14 +6,14 @@ export default function Edittor() {
   const [initialContent, setInitialContent] = useState("<p>Type here ...</p>");
   const [isLoading, setIsLoading] = useState(true);
   const editorRef = useRef(null);
-  
+
   useEffect(() => {
     const savedContent = localStorage.getItem("savedNote");
     if (savedContent) {
       setInitialContent(savedContent);
     }
   }, []);
-  // Save content to localStorage
+
   const saveContent = () => {
     if (editorRef.current) {
       const content = editorRef.current.getContent();
