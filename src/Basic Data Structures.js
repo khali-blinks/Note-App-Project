@@ -20,3 +20,13 @@ function copyMachine(arr, num) {
 }
 
 console.log(copyMachine([true, false, true], 2));
+
+function quickCheck(arr, elem) {
+  // Only change code below this line
+  if (arr.indexOf(elem) == !-1) {
+    return true;
+  } else {
+    return false;
+  }
+  // Only change code above this line
+}
