@@ -65,3 +65,13 @@ function isEveryoneHere(userObj) {
     userObj.hasOwnProperty(name)
   );
 }
+
+function factorialize(num) {
+  let count = 1;
+  while (num >= 1) {
+    count = count * num--;
+  }
+  return count;
+}
+
+factorialize(5);
