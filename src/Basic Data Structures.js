@@ -89,9 +89,9 @@ function word(str) {
 word("The quick brown fox jumped over the lazy dog");
 
 function largestOfFour(arr) {
-  let bigNum = 0;
   let bigArr = [];
   for (let i = 0; i < arr.length; i++) {
+    let bigNum = arr[i][0];
     for (let j = 0; j < arr[i].length; j++) {
       if (arr[i][j] > bigNum) {
         bigNum = arr[i][j];
