@@ -75,3 +75,15 @@ function factorialize(num) {
 }
 
 factorialize(5);
+
+function word(str) {
+  let newArr = str.split("");
+  let longestWord = 0;
+  for (let i = 0; i < newArr.length; i++) {
+    if (newArr[i].length > longestWord) {
+      longestWord = newArr[i].length;
+    }
+  }
+  return longestWord;
+}
+word("The quick brown fox jumped over the lazy dog");
