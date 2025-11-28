@@ -87,3 +87,24 @@ function word(str) {
   return longestWord;
 }
 word("The quick brown fox jumped over the lazy dog");
+
+function largestOfFour(arr) {
+  let bigNum = 0;
+  let bigArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      if (arr[i][j] > bigNum) {
+        bigNum = arr[i][j];
+        bigArr = arr[i];
+      }
+    }
+  }
+  return bigArr;
+}
+
+largestOfFour([
+  [4, 5, 1, 3],
+  [13, 27, 18, 26],
+  [32, 35, 37, 39],
+  [1000, 1001, 857, 1],
+]);
