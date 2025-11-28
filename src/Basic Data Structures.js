@@ -95,9 +95,9 @@ function largestOfFour(arr) {
     for (let j = 0; j < arr[i].length; j++) {
       if (arr[i][j] > bigNum) {
         bigNum = arr[i][j];
-        bigArr = arr[i];
       }
     }
+    bigArr.push(bigNum);
   }
   return bigArr;
 }
