@@ -117,3 +117,17 @@ function confirmEnding(str, target) {
 }
 
 confirmEnding("Bastian", "n");
+
+function repeatStringNumTimes(str, num) {
+  let word = "";
+  if (num <= 0) {
+    return word;
+  } else {
+    for (let i = 0; i < num; i++) {
+      word = word + str;
+    }
+    return word;
+  }
+}
+
+repeatStringNumTimes("abc", 3);
