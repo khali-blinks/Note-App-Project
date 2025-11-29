@@ -108,3 +108,12 @@ largestOfFour([
   [32, 35, 37, 39],
   [1000, 1001, 857, 1],
 ]);
+
+function confirmEnding(str, target) {
+  let lengthStr = str.length;
+  let lengthTarget = target.length;
+
+  return str.substring(lengthStr - lengthTarget) === target;
+}
+
+confirmEnding("Bastian", "n");
