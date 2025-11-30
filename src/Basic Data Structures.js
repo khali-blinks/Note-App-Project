@@ -162,3 +162,13 @@ findElement([1, 2, 3, 4], (num) => num % 2 === 0);
 function booWho(bool) {
   return typeof bool === "boolean";
 }
+
+function titleCase(str) {
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+titleCase("I'm a little tea pot");
