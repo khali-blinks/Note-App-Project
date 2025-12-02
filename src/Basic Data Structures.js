@@ -180,3 +180,11 @@ function frankenSplice(arr1, arr2, n) {
 }
 
 frankenSplice([1, 2, 3], [4, 5, 6], 1);
+
+function bouncer(arr) {
+  let newArr = [...arr];
+
+  return newArr.filter(Boolean);
+}
+
+bouncer([false, null, 0, NaN, undefined, ""]);
