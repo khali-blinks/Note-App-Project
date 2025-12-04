@@ -188,3 +188,18 @@ function bouncer(arr) {
 }
 
 bouncer([false, null, 0, NaN, undefined, ""]);
+
+function getIndexToIns(arr, num) {
+  let sortedArr = arr.sort((a, b) => a - b);
+  let indx;
+  for (let i = 0; i < sortedArr.length; i++) {
+    if (sortedArr[i] >= num) {
+      indx = i;
+      return indx;
+      break;
+    }
+  }
+  return arr.length;
+}
+
+getIndexToIns([], 50);
