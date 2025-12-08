@@ -229,3 +229,13 @@ function chunkArrayInGroups(arr, size) {
 }
 
 chunkArrayInGroups(["a", "b", "c", "d"], 2);
+
+// Languague Detection Code
+import { franc, francAll } from "franc";
+import langs from "langs";
+
+const text = process.argv[2];
+const code = franc(text);
+
+const language = langs.where("3", code);
+console.log(language.name);
